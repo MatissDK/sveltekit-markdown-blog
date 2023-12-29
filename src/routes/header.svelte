@@ -5,7 +5,10 @@
 
 <nav>
 	<a href="/" class="title">
-		<b>{config.title}</b>
+		<div style="display: flex;">
+			<div><b>{config.title}</b></div>
+			<img width="25" height="25" alt="on-fire" src="https://fav.farm/🔥"/>
+		</div>
 	</a>
 
 	<ul class="links">
