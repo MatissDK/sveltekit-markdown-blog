@@ -6,7 +6,7 @@
 <nav>
   <a href="/" class="title">
     <div style="display: flex;">
-      <div><b>{config.title}</b></div>
+      <h4>{config.title}</h4>
       <img width="25" height="25" alt="on-fire" src="https://fav.farm/🔥" />
     </div>
   </a>

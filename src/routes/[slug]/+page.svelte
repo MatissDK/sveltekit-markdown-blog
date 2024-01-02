@@ -31,6 +31,8 @@
 	article {
 		max-inline-size: var(--size-content-3);
 		margin-inline: auto;
+		/*border: 1px solid red;*/
+		/*width: 100%;*/
 	}
 
 	h1 {
@@ -44,6 +46,7 @@
 
 	.tags {
 		display: flex;
+		flex-flow: wrap;
 		gap: var(--size-3);
 		margin-top: var(--size-7);
 	}

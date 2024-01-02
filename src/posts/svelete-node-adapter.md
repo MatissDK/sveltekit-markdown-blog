@@ -32,7 +32,7 @@ RUN mkdir /app
 COPY --from=builder /app/build /app/build
 COPY --from=builder /app/package.json /app/package-lock.json /app/
 
-RUN cd /app && \ 
+  RUN cd /app && \ 
   npm install --production
 
 WORKDIR /app
