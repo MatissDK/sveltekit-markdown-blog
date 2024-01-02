@@ -4,20 +4,27 @@
 </script>
 
 <nav>
-  <a href="/" class="title">
-    <div style="display: flex;">
-      <h4>{config.title}</h4>
-      <img width="25" height="25" alt="on-fire" src="https://fav.farm/🔥" />
-    </div>
-  </a>
+<!--  <a href="/" class="title">-->
+<!--    {config.title}-->
+<!--&lt;!&ndash;    <div style="display: flex;">&ndash;&gt;-->
+<!--&lt;!&ndash;      <h4>{config.title}</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;      <img width="25" height="25" alt="on-fire" src="https://fav.farm/🔥" />&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--  </a>-->
+
+  <ul class="links">
+    <li>
+      <a class="home-link" href="/">
+        {config.title}
+        <img width="20" height="20" alt="on-fire" src="https://fav.farm/🔥" />
+      </a>
+    </li>
+  </ul>
 
   <ul class="links">
     <li>
       <a href="/about">About</a>
     </li>
-    <!--		<li>-->
-    <!--			<a href="/contact">Contact</a>-->
-    <!--		</li>-->
     <li>
       <a href="/rss.xml" target="_blank">RSS</a>
     </li>
@@ -33,6 +40,10 @@
 
     .links {
         margin-block: var(--size-7);
+    }
+
+    .home-link {
+        display: flex;
     }
 
     a {

@@ -40,7 +40,7 @@ html {
 	--surface-2-light: var(--gray-1);
 	--surface-3-light: var(--gray-2);
 	--surface-4-light: var(--gray-3);
-	--background-light: none;
+	--background-light:var(--gray-1);
 	--border-light: var(--gray-4);
 }
 
@@ -110,7 +110,7 @@ body {
 html {
 	color: var(--text-1);
 	accent-color: var(--link);
-	background-image: var(--background);
+	background-color: var(--background);
 	background-attachment: fixed;
 }
 
