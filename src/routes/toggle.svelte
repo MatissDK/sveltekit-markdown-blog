@@ -8,17 +8,24 @@
 	{#if $theme === 'dark'}
 		<div in:fly={{ y: 10 }}>
 			<Sun />
-			<span>Light</span>
+			<span class="icon-text">Light</span>
 		</div>
 	{:else}
 		<div in:fly={{ y: -10 }}>
 			<Moon />
-			<span>Dark</span>
+			<span class="icon-text">Dark</span>
 		</div>
 	{/if}
 </button>
 
 <style>
+
+	@media (max-width: 768px) {
+		.icon-text {
+			display: none;
+		}
+	}
+
 	button {
 		padding: 0;
 		font-weight: inherit;
