@@ -12,9 +12,9 @@ published: true
 
 Hello friends! 👋
 
-Successfully running your app locally is only a portion of the victory; the other crucial aspect is deploying it to a live server. As outlined in the SvelteKit documentation: 'Before you can deploy your SvelteKit app, you need to adapt it for your deployment target.' In my case, the goal for this project was to deploy it on my Linode standalone server. The logical choice for this deployment scenario was the @sveltejs/adapter-node.
+Successfully running your app locally is only a portion of the victory; the other crucial aspect is deploying it to a live server. As outlined in the SvelteKit documentation: 'Before you can deploy your SvelteKit app, you need to adapt it for your deployment target.' In my case, the goal for this project was to deploy it on my Linode standalone server. The logical choice for this deployment scenario was the @sveltejs/adapter-node
 
-## Step 1: Install the Node Adapter
+### Step 1: Install the Node Adapter
 
 
 ```bash
@@ -32,7 +32,7 @@ After the installation, don't forget to update your package.json and remove @sve
 }
 ```
 
-## Step 2: Configure the Adapter in your svelte.config.js.
+### Step 2: Configure the Adapter in your svelte.config.js.
 
 Replace @sveltejs/adapter-auto with @sveltejs/adapter-node
 
@@ -46,7 +46,7 @@ Replace @sveltejs/adapter-auto with @sveltejs/adapter-node
   };
 ```
 
-## Step 3: Validate Your App
+### Step 3: Validate Your App
 
 Before deploying, it's crucial to ensure your app is running smoothly. Build the app by executing:
 
