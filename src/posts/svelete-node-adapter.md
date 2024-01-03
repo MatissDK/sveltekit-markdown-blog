@@ -10,8 +10,6 @@ categories:
 published: true
 ---
 
-## Markdown
-
 Hello friends! 👋
 
 Successfully running your app locally is only a portion of the victory; the other crucial aspect is deploying it to a live server. As outlined in the SvelteKit documentation: 'Before you can deploy your SvelteKit app, you need to adapt it for your deployment target.' In my case, the goal for this project was to deploy it on my Linode standalone server. The logical choice for this deployment scenario was the @sveltejs/adapter-node.
@@ -19,7 +17,7 @@ Successfully running your app locally is only a portion of the victory; the othe
 ## Step 1: Install the Node Adapter
 
 
-```ts
+```shell:terminal
   npm i -D @sveltejs/adapter-node
 ```
 
@@ -52,13 +50,13 @@ Replace @sveltejs/adapter-auto with @sveltejs/adapter-node
 
 Before deploying, it's crucial to ensure your app is running smoothly. Build the app by executing:
 
-```ts
+```shell:terminal
   npm run build
 ```
 
 This command will generate the /build folder. To launch your app, use:
 
-```ts
+```bash
   node build
 ```
 
