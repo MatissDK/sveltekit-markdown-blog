@@ -10,9 +10,9 @@ categories:
 published: true
 ---
 
-# Hello friends! 👋
+Hello friends! 👋
 
-### Successfully running your app locally is only a portion of the victory; the other crucial aspect is deploying it to a live server. As outlined in the SvelteKit documentation: 'Before you can deploy your SvelteKit app, you need to adapt it for your deployment target.' In my case, the goal for this project was to deploy it on my Linode standalone server. The logical choice for this deployment scenario was the @sveltejs/adapter-node.
+Successfully running your app locally is only a portion of the victory; the other crucial aspect is deploying it to a live server. As outlined in the SvelteKit documentation: 'Before you can deploy your SvelteKit app, you need to adapt it for your deployment target.' In my case, the goal for this project was to deploy it on my Linode standalone server. The logical choice for this deployment scenario was the @sveltejs/adapter-node.
 
 ## Step 1: Install the Node Adapter
 
@@ -21,7 +21,7 @@ published: true
   npm i -D @sveltejs/adapter-node
 ```
 
-### After the installation, don't forget to update your package.json and remove @sveltejs/adapter-auto dependency from package.json file.
+After the installation, don't forget to update your package.json and remove @sveltejs/adapter-auto dependency from package.json file
 
 ```ts
 {
@@ -34,7 +34,7 @@ published: true
 
 ## Step 2: Configure the Adapter in your svelte.config.js.
 
-### Replace @sveltejs/adapter-auto with @sveltejs/adapter-node
+Replace @sveltejs/adapter-auto with @sveltejs/adapter-node
 
 ```ts
  import adapter from '@sveltejs/adapter-node';
@@ -60,32 +60,8 @@ This command will generate the /build folder. To launch your app, use:
   node build
 ```
 
-You should see a message like: Listening on 0.0.0.0:3000, indicating that the server is running on port 3000.
+You should see a message like: Listening on 0.0.0.0:3000. This indicates that the server is now running on port 3000.
 
-```ts
-FROM node:18-alpine AS builder
+To validate if your app is running successfully, open your web browser and navigate to [http://localhost:3000](http://localhost:3000).
 
-RUN mkdir /app
-
-COPY . /app
-
-RUN cd /app && npm install && \
-  npm run build
-
-
-FROM node:18-alpine
-
-RUN mkdir /app
-
-COPY --from=builder /app/build /app/build
-COPY --from=builder /app/package.json /app/package-lock.json /app/
-
-  RUN cd /app && \ 
-  npm install --production
-
-WORKDIR /app
-
-EXPOSE 3000
-
-CMD ["node", "build/index.js"]
-```
+If you see your app rendered in the browser, congratulations! Your app is running successfully. You can now proceed to the next step with confidence.
