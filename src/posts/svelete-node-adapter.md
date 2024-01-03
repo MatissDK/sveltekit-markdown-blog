@@ -17,7 +17,7 @@ Successfully running your app locally is only a portion of the victory; the othe
 ## Step 1: Install the Node Adapter
 
 
-```shell:terminal
+```bash
   npm i -D @sveltejs/adapter-node
 ```
 
@@ -50,7 +50,7 @@ Replace @sveltejs/adapter-auto with @sveltejs/adapter-node
 
 Before deploying, it's crucial to ensure your app is running smoothly. Build the app by executing:
 
-```shell:terminal
+```bash
   npm run build
 ```
 
