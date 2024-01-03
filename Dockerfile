@@ -4,9 +4,7 @@ RUN mkdir /app
 
 COPY . /app
 
-RUN cd /app && npm install && \
-  npm run build
-
+RUN cd /app && npm install && npm run build
 
 FROM node:18-alpine
 
