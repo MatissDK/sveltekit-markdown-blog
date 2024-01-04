@@ -167,7 +167,13 @@ li {
 	padding-inline-start: var(--size-2);
 }
 
+.prose :is(p) {
+	line-height: 2.2rem;
+	text-align: justify;
+}
+
 .prose pre {
+	margin-top: var(--size-3);
 	max-inline-size: 100%;
 	padding: var(--size-3);
 	border-radius: 8px;
