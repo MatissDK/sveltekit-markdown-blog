@@ -34,4 +34,13 @@
 	p {
 		color: var(--text-2);
 	}
+
+	@media (max-width: 860px) {
+		footer p {
+			display: none;
+		}
+		footer blockquote {
+			font-size: var(--size-3);
+		}
+	}
 </style>
